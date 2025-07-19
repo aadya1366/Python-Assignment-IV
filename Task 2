@@ -1,0 +1,27 @@
+Program:
+a=input('Enter text to write to the file: ')
+file=open('output.txt','r+')
+write=file.write(a)
+file.close()
+print('Data successfully written to output.txt.')
+b=input('\nEnter additional text to append: ')
+file=open('output.txt','a')
+file.write('\n')
+add=file.write(b)
+file.close()
+print('Data successully appended.')
+print('Final content of output.txt:')
+file=open('output.txt','r+')
+read=file.read()
+print(read)
+file.close()
+
+Output:
+Enter text to write to the file: Hello,Python!
+Data successfully written to output.txt.
+
+Enter additional text to append: Learning file handling in Python
+Data successully appended.
+Final content of output.txt:
+Hello,Python!
+Learning file handling in Python
